@@ -48,3 +48,8 @@ class _CheckableTodoItemState extends State<CheckableTodoItem> {
     );
   }
 }
+
+/// note :
+/// le problèmes se trouve au niveau du ckeckbox
+/// lorsque l'on selectionne un todo et si on veut faire le trie en appuyons 
+/// sur le button du trie, les todos qui autrefois a été checker changes de position mais pas le checkbox checked
