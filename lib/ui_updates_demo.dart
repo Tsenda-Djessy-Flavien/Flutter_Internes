@@ -19,6 +19,8 @@ class _UIUpdatesDemo extends State<UIUpdatesDemo> {
   var _isUnderstood = false;
 
   @override
+  // lorsque setState est appéler sur un button la fn build ci-dessous execute de nouveau
+  // et vérifier si une elt à changer sur le UI ou pas
   Widget build(BuildContext context) {
     print('UIUpdatesDemo BUILD called');
     return Padding(
@@ -60,6 +62,8 @@ class _UIUpdatesDemo extends State<UIUpdatesDemo> {
                 ),
               ],
             ),
+            // dans le cas de cette application, les updates de l'Etat ne conserne que ce text
+            // qui sont declenchés par les bouttons ci-dessus.
             if (_isUnderstood) const Text('Awesome!'),
           ],
         ),
